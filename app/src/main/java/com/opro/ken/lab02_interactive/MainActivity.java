@@ -13,9 +13,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void submitOrder(View view){
-        TextView tv = (TextView)findViewById(R.id.tv1);
-        tv.setText("1");
+    public void submitOrder(View view) {
+        display(i*50);
+    }
+
+    private void display(int num2) {
+        TextView tv2 = (TextView) findViewById(R.id.tv2);
+        tv2.setText(String.valueOf(num2));
+    }
+    int i = 0;
+
+    public void a(View view) {
+        aa(++i);
+    }
+    public void b(View view) {
+        aa(--i);
+    }
+    private void aa(int num1) {
+        TextView tv1 = (TextView) findViewById(R.id.tv1);
+        tv1.setText(String.valueOf(num1));
     }
 
 }
