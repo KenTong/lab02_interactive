@@ -16,10 +16,10 @@
         android:text="Quantity:"
         android:layout_marginBottom="16dp"
         android:textSize="24sp"
-        android:textAllCaps="true"
         />
 
   <TextView
+      android:id="@+id/tv1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="0"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="Order"
-        android:onClick="selfDestruct"
+        android:onClick="submitOrder"
         android:background="@android:color/holo_blue_light"
         android:layout_marginTop="16dp"
         />
