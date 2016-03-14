@@ -10,40 +10,54 @@
     tools:context="com.opro.ken.lab02_interactive.MainActivity"
     android:orientation="vertical">
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity:"
-        android:layout_marginBottom="16dp"
-        android:textSize="24sp"
-        />
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:text="+"
-        android:layout_marginBottom="16dp"
-        android:onClick="a"
-        />
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity:"
+            android:layout_marginBottom="16dp"
+            android:textSize="24sp"
+            />
 
-  <TextView
-      android:id="@+id/tv1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:text="0"
-      android:textSize="24sp"
-      android:textColor="@android:color/black"
-      />
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:text="-"
-        android:layout_marginBottom="16dp"
-        android:onClick="b"
-        />
+
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="+"
+            android:layout_marginBottom="16dp"
+            android:onClick="a"
+            />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="0"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="-"
+            android:layout_marginBottom="16dp"
+            android:onClick="b"
+            />
+
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,5 +83,7 @@
         android:background="@android:color/holo_blue_light"
         android:layout_marginTop="16dp"
         />
+
+
 
 </LinearLayout>
