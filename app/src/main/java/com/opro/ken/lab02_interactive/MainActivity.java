@@ -9,7 +9,9 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    int i = 0;
+    int mQuantity = 0;
+    int mPrice = 50;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,39 +20,42 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        display(i);
+        display();
     }
 
-    private void display(int num2) {
+    private void display() {
         TextView tv2 = (TextView) findViewById(R.id.tv2);
-        int total = 50 * num2;
+        int total = mPrice * mQuantity ;
         String myString = NumberFormat.getCurrencyInstance().format(total);
         tv2.setText(myString);
 
 
-        if (num2 > 0) {
+        if (mQuantity > 0) {
             String myString1 = NumberFormat.getCurrencyInstance().format(total);
             tv2.setText(myString1+ "\nThank you:)");
+
         }
-        else if (num2 == 0) {
+        else if (mQuantity == 0) {
             String myString1 = NumberFormat.getCurrencyInstance().format(total);
             tv2.setText(myString1+ "\nFree!!!");
         }
     }
 
-    public void a(View view) {
-        aa(++i);
+    public void incement(View view) {
+        ++mQuantity;
+        aa();
+
     }
 
-    public void b(View view) {
-        if (i > 0) {
-            i--;
-            aa(i);
+    public void decement(View view) {
+        if (mQuantity > 0) {
+            mQuantity--;
+            aa();
         }
     }
 
-    private void aa(int num1) {
+    private void aa() {
         TextView tv1 = (TextView) findViewById(R.id.tv1);
-        tv1.setText(String.valueOf(num1));
+        tv1.setText(String.valueOf(mQuantity));
     }
 }

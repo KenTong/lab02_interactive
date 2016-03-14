@@ -24,28 +24,35 @@
 
 
         <Button
+            android:gravity="center"
+            android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:onClick="a"
-            android:text="+"
+            android:onClick="decement"
+            android:text="-"
             android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:text="0"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
 
+
         <Button
+            android:gravity="center"
+            android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:onClick="b"
-            android:text="-"
+            android:onClick="incement"
+            android:text="+"
             android:textColor="@android:color/black" />
 
 
