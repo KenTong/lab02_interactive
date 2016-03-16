@@ -48,15 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-    public void Check(){
-        final CheckBox toppings = (CheckBox) findViewById(R.id.toppings);
-        if (toppings.isChecked())
-        {
-            toppings.setChecked(false);
-            ck=(true);
-        }
-    }
-
 
     //private void resetTotalPrice() {
         //TextView tv1 = (TextView) findViewById(R.id.tv1);
@@ -70,7 +61,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void add(View view) {
         final CheckBox toppings = (CheckBox) findViewById(R.id.toppings);
+        if (toppings.isChecked())
+    {
+        toppings.setChecked(false);
+        ck=(false);
         toppings.setChecked(true);
         ck=(true);
+    }
     }
 }
