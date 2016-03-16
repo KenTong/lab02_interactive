@@ -63,6 +63,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:text="Toppings"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/toppings"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="泡菜"
+        android:onClick="add"
+        android:textSize="19sp"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Price"
         android:textSize="24sp" />
 
@@ -72,7 +88,7 @@
         android:layout_height="wrap_content"
         android:text="NT$0"
         android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        android:textSize="15sp" />
 
     <Button
         android:layout_width="wrap_content"
