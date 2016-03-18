@@ -90,15 +90,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mediator(View view) {
-        if (view.getId() == R.id.b1)
-            decement(view);
-        if (view.getId() == R.id.b2)
-            incement(view);
-                if (view.getId() == R.id.toppings)
-                    add(view);
-                if (view.getId() == R.id.b3)
-                    submitOrder(view);
-            }
-
+        switch (view.getId()) {
+            case R.id.b1:
+                decement(view);
+                break;
+            case R.id.b2:
+                incement(view);
+                break;
+            case R.id.toppings:
+                add(view);
+            break;
+            case  R.id.b3:
+                submitOrder(view);
+            break;
+        }
+    }
     }
 
