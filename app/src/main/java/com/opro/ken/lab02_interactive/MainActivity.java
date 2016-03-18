@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         displayMessage();
     }
+
     private void displayMessage() {
         TextView tv2 = (TextView) findViewById(R.id.tv2);
         tv2.setText(PriceMessage);
@@ -34,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
         int end = QuantityMessage.length();
         QuantityMessage.delete(start, end).append(mQuantity);
         tv1.setText(QuantityMessage);
-    }
-
-    public void submitOrder(View view) {
-        displayTotalPrice();
     }
 
     private void displayTotalPrice() {
@@ -54,12 +51,17 @@ public class MainActivity extends AppCompatActivity {
         tv2.setText(message);
     }
 
+    public void submitOrder(View view) {
+        displayTotalPrice();
+    }
+
     public void incement(View view) {
         ++mQuantity;
         resetPriceMessage();
         displayMessage();
         displayQuantity();
     }
+
     public void decement(View view) {
         if (mQuantity > 0) {
             --mQuantity;
@@ -70,16 +72,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-       private void clearPriceMessage() {
-            int start = 0;
-            int end = PriceMessage.length();
-            PriceMessage.delete(start, end);
-        }
-
     public void add(View view) {
         resetPriceMessage();
         displayMessage();
-        }
+    }
+
+    private void clearPriceMessage() {
+        int start = 0;
+        int end = PriceMessage.length();
+        PriceMessage.delete(start, end);
+    }
 
     private void resetPriceMessage() {
         clearPriceMessage();
@@ -87,5 +89,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void mediator(View view) {
+        if (view.getId() == R.id.b1)
+            decement(view);
+        if (view.getId() == R.id.b2)
+            incement(view);
+                if (view.getId() == R.id.toppings)
+                    add(view);
+                if (view.getId() == R.id.b3)
+                    submitOrder(view);
+            }
 
-}
+    }
+
