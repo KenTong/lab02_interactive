@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             case  R.id.b3:
                 submitOrder(view);
             break;
+            }
         }
-    }
     }
 
